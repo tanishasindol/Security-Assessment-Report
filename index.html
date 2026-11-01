@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureReport | Security Assessment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🛡️ SecureReport</div>
+  <span class="badge">SECURITY TOOL</span>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p class="tag">CYBERSECURITY MANAGEMENT</p>
+    <h1>Security Assessment Report</h1>
+    <p>Identify, document and manage security risks through structured assessments.</p>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <span>📋</span>
+      <h2 id="totalReports">0</h2>
+      <p>Total Reports</p>
+    </div>
+
+    <div class="stat-card">
+      <span>⚠️</span>
+      <h2 id="highRisks">0</h2>
+      <p>High Risks</p>
+    </div>
+
+    <div class="stat-card">
+      <span>✅</span>
+      <h2 id="completed">0</h2>
+      <p>Assessments</p>
+    </div>
+  </section>
+
+  <section class="form-card">
+    <h2>📝 New Security Assessment</h2>
+    <p class="subtitle">Enter the details of your security assessment.</p>
+
+    <form id="assessmentForm">
+
+      <label for="projectName">Project / System Name</label>
+      <input type="text" id="projectName"
+        placeholder="Enter project name" required>
+
+      <label for="target">Target URL / System</label>
+      <input type="text" id="target"
+        placeholder="https://example.com" required>
+
+      <label for="assessmentType">Assessment Type</label>
+      <select id="assessmentType" required>
+        <option value="">Select assessment type</option>
+        <option>Web Application Security</option>
+        <option>Network Security</option>
+        <option>Password Security</option>
+        <option>System Security</option>
+        <option>General Security Audit</option>
+      </select>
+
+      <label for="riskLevel">Risk Level</label>
+      <select id="riskLevel" required>
+        <option value="">Select risk level</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+        <option>Critical</option>
+      </select>
+
+      <label for="vulnerability">Vulnerability / Finding</label>
+      <textarea id="vulnerability"
+        placeholder="Describe the security finding..."
+        required></textarea>
+
+      <label for="recommendation">Recommended Solution</label>
+      <textarea id="recommendation"
+        placeholder="Enter recommended security measures..."
+        required></textarea>
+
+      <button type="submit" id="saveBtn">
+        Save Assessment →
+      </button>
+
+    </form>
+
+    <p id="message"></p>
+  </section>
+
+  <section class="history-card">
+    <div class="history-heading">
+      <h2>📂 Assessment History</h2>
+      <button class="clear-btn" id="clearBtn" type="button">
+        Clear All
+      </button>
+    </div>
+
+    <div id="reportList">
+      <p class="empty">No assessments saved yet.</p>
+    </div>
+  </section>
+
+  <section class="info-card">
+    <h2>About SecureReport</h2>
+    <p>
+      SecureReport is an educational cybersecurity assessment
+      application designed to document security findings,
+      evaluate risks and recommend protective measures.
+    </p>
+
+    <div class="notice">
+      Note: This application stores assessment records locally
+      in the browser. It does not perform automatic vulnerability
+      scanning or connect to a remote database.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 SecureReport | Security Assessment Project
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
